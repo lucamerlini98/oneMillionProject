@@ -1,7 +1,7 @@
 import streamlit as st
 import plotly.graph_objs as go
 
-st.title("Quando sarò milionario?")
+st.title("Quando sarò milionario? Roby è un pollo")
 
 # Descrizione
 st.header("Calcolo Patrimonio Futuro")
