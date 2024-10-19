@@ -1,7 +1,7 @@
 import streamlit as st
 import plotly.graph_objs as go
 
-st.title("Quando sarò milionario? Roby è un pollo")
+st.title("Quando sarò milionario?")
 
 # Descrizione
 st.header("Calcolo Patrimonio Futuro")
@@ -12,13 +12,18 @@ st.write(
 )
 
 eta = st.number_input("Quanti anni hai?", min_value=0, max_value=120, value=30, step=1)
-patrimonio_investito = st.number_input("A quanto ammonta il tuo patrimonio investito?", min_value=0.0, max_value=10_000_000.0, value=50_000.0, step=1_000.0)
-rendimento_atteso = st.number_input("Qual è il rendimento atteso annuale previsto dai tuoi investimenti?", min_value=0.0, max_value=1.0, value=0.07, step=0.01)
-inflazione = st.number_input("Qual è l'inflazione attesa annuale?", min_value=0.0, max_value=1.0, value=0.02, step=0.01)
-spese_annuali = st.number_input("A quanto ammontano le tue spese annuali?", min_value=0.0, max_value=1_000_000.0, value=20_000.0, step=1_000.0)
-reddito = st.number_input("A quanto ammonta il tuo reddito annuale netto?", min_value=0.0, max_value=1_000_000.0, value=40_000.0, step=1_000.0)
+patrimonio_investito = st.number_input("A quanto ammonta il tuo patrimonio investito?", min_value=0.0, max_value=10_000_000.0, value=10_000.0, step=500.0)
+rendimento_atteso = float(st.number_input("Qual è il rendimento atteso annuale previsto dai tuoi investimenti? (in %)", min_value=0.0, value=7.0, step=0.1)) / 100  # Convertire in decimale
+inflazione = float(st.number_input("Qual è l'inflazione attesa annuale? (in %)", min_value=0.0, value=2.0, step=0.1)) / 100  # Convertire in decimale
+spese_annuali = st.number_input("A quanto ammontano le tue spese annuali?", min_value=0.0, max_value=1_000_000.0, value=20_000.0, step=500.0)
+reddito = st.number_input("A quanto ammonta il tuo reddito annuale netto?", min_value=0.0, max_value=1_000_000.0, value=40_000.0, step=500.0)
+obbligazionario = st.radio("I tuoi investimenti saranno totalmente obbligazionari?", ("Sì", "No"))
 
-tassazione = 0.26
+if obbligazionario == "Sì":
+    tassazione = 0.125
+else:
+    tassazione = 0.26
+
 
 def calcola_eta_milione(patrimonio_iniziale, guadagni_annuali, spese_annuali, rendimento, inflazione, tassazione, eta_corrente):
 
