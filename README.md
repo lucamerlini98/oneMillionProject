@@ -16,3 +16,9 @@ Il progetto **Calcolo Patrimonio Futuro** è un'applicazione web interattiva che
 - **Python**: Linguaggio di programmazione utilizzato per lo sviluppo dell'applicazione.
 - **Streamlit**: Framework per creare applicazioni web interattive in Python.
 - **Plotly**: Libreria per la visualizzazione dei dati in grafici interattivi.
+
+© 2024, Luca Merlini. Tutti i diritti riservati.  
+Questo software è fornito "così com'è", senza garanzia di alcun tipo. 
+Si autorizza la copia e la modifica, a condizione che venga fornita 
+la notifica della paternità e che non venga utilizzato per scopi 
+commerciali senza permesso esplicito.
