@@ -83,6 +83,7 @@ def calcola_eta_milione(patrimonio_iniziale, guadagni_annuali, spese_annuali, re
                       template='plotly_white')
 
     st.plotly_chart(fig)
+    st.markdown("© 2024, Luca Merlini")
 
     return eta
 
