@@ -11,19 +11,19 @@ st.write(
     "tenendo conto di vari fattori come rendimento degli investimenti, inflazione, spese annuali e reddito."
 )
 
-# eta = st.slider("Quanti anni hai?", min_value=0, max_value=120, value=30)
-# patrimonio_investito = st.slider("A quanto ammonta il tuo patrimonio investito?", min_value=0.0, max_value=1000000.0, value=50000.0, step=100.0)
-# rendimento_atteso = st.slider("Qual è il rendimento atteso annuale previsto dai tuoi investimenti (%)?", min_value=0.0, max_value=100.0, value=7.0, step=0.1) / 100
-# inflazione = st.slider("Qual è l'inflazione attesa annuale (%)?", min_value=0.0, max_value=20.0, value=2.0, step=0.1) / 100
-# spese_annuali = st.slider("A quanto ammontano le tue spese annuali?", min_value=0.0, max_value=100000.0, value=20000.0, step=100.0)
-# reddito = st.slider("A quanto ammonta il tuo reddito annuale netto?", min_value=0.0, max_value=100000.0, value=30000.0, step=100.0)
+eta = st.slider("Quanti anni hai?", min_value=0, max_value=120, value=30)
+patrimonio_investito = st.slider("A quanto ammonta il tuo patrimonio investito?", min_value=0.0, max_value=1000000.0, value=50000.0, step=100.0)
+rendimento_atteso = st.slider("Qual è il rendimento atteso annuale previsto dai tuoi investimenti (%)?", min_value=0.0, max_value=100.0, value=7.0, step=0.1) / 100
+inflazione = st.slider("Qual è l'inflazione attesa annuale (%)?", min_value=0.0, max_value=20.0, value=2.0, step=0.1) / 100
+spese_annuali = st.slider("A quanto ammontano le tue spese annuali?", min_value=0.0, max_value=100000.0, value=20000.0, step=100.0)
+reddito = st.slider("A quanto ammonta il tuo reddito annuale netto?", min_value=0.0, max_value=100000.0, value=30000.0, step=100.0)
 
-eta = st.number_input("Quanti anni hai?", min_value=0, max_value=120, value=30, step=1)
-patrimonio_investito = st.number_input("A quanto ammonta il tuo patrimonio investito?", min_value=0.0, max_value=10_000_000.0, value=10_000.0, step=500.0)
-rendimento_atteso = float(st.number_input("Qual è il rendimento atteso annuale previsto dai tuoi investimenti? (in %)", min_value=0.0, value=7.0, step=0.1)) / 100 
-inflazione = float(st.number_input("Qual è l'inflazione attesa annuale? (in %)", min_value=0.0, value=2.0, step=0.1)) / 100 
-spese_annuali = st.number_input("A quanto ammontano le tue spese annuali?", min_value=0.0, max_value=1_000_000.0, value=20_000.0, step=500.0)
-reddito = st.number_input("A quanto ammonta il tuo reddito annuale netto?", min_value=0.0, max_value=1_000_000.0, value=40_000.0, step=500.0)
+# eta = st.number_input("Quanti anni hai?", min_value=0, max_value=120, value=30, step=1)
+# patrimonio_investito = st.number_input("A quanto ammonta il tuo patrimonio investito?", min_value=0.0, max_value=10_000_000.0, value=10_000.0, step=500.0)
+# rendimento_atteso = float(st.number_input("Qual è il rendimento atteso annuale previsto dai tuoi investimenti? (in %)", min_value=0.0, value=7.0, step=0.1)) / 100 
+# inflazione = float(st.number_input("Qual è l'inflazione attesa annuale? (in %)", min_value=0.0, value=2.0, step=0.1)) / 100 
+# spese_annuali = st.number_input("A quanto ammontano le tue spese annuali?", min_value=0.0, max_value=1_000_000.0, value=20_000.0, step=500.0)
+# reddito = st.number_input("A quanto ammonta il tuo reddito annuale netto?", min_value=0.0, max_value=1_000_000.0, value=40_000.0, step=500.0)
 
 obbligazionario = st.radio("I tuoi investimenti saranno totalmente obbligazionari?", ("Sì", "No"), index=1)
 
